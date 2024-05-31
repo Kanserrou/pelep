@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Initial Name of "J.P.C.F" | Coder Pelep</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #4e4e4e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body onload="drawInitials();">
+    <canvas id="canvas" width="1180" height="500" style="border: 8px solid greenyellow;"></canvas>
+    <script>
+        function drawInitials() {
+            var canvas = document.getElementById('canvas');
+            var context = canvas.getContext('2d');
+            context.lineWidth = 15;
+            context.beginPath();
+
+            // Draw "J"
+           
+            context.strokeStyle = 'greenyellow';
+            context.moveTo(200, 50);
+            context.lineTo(200, 470);
+            context.lineTo(150, 220);
+
+            // Draw "P"
+            
+            context.moveTo(400, 50);
+            context.lineTo(400, 470);
+            context.arc(400, 160, 110, Math.PI * 1.5, Math.PI * 0.5);
+
+            // Draw "C"
+           
+            context.moveTo(600, 45);
+            context.lineTo(600, 470);
+            context.moveTo(600, 50);
+            context.lineTo(700, 80);
+           
+            // Draw "F"
+
+            context.moveTo(850, 97);
+            context.lineTo(700, 28000);
+            context.moveTo(800, 100);
+            context.lineTo(1000, 100);
+            context.moveTo(800, 50);
+            context.lineTo(1050, 50);
+            context.moveTo(500, 30);
+            context.moveTo(850, 60);
+            context.stroke();
+        }
+    </script>
+  </body>
+</html>
+
+

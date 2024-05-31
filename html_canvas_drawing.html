@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINAL PROJECT | WEBSITE</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontsawesome/css/all.min.css">
+    <script type="text/javascript" src="js/jquery-min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+</head>
+
+<body onload="cat();">
+
+
+    <style>
+        .navbar {
+            height: 140px;
+            background-color: rgb(0, 0, 0);
+        }
+        
+        #offcanvasNavbar {
+            width: 280px;
+        }
+        
+        .inline {
+            display: inline-block
+        }
+        
+        .center-text {
+            text-align: center;
+        }
+        
+        .margin-top-20 {
+            margin-top: 20px;
+        }
+        /* body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        } */
+    </style>
+
+<div>
+  <body>
+  <div class="margin-left">
+      <h1 align="left"><b><i><span style="color:rgb(29, 119, 36)">HTML CANVAS<span style="color:rgb(0, 0, 0)"> DRAWING</span></i></b></h1>
+  
+  </div>
+  </body>
+</div>
+
+
+<nav class="navbar sticky-top shadow">
+  <div class="container-fluid">
+      <button class="navbar-toggler ml-5 border-0 shadow bg-dark" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"
+          style="margin-left:15px;">
+          <div class=" text-light p-2 ">
+              <i class="fa-solid fa-bars fa-xl"></i>
+          </div>
+      </button>
+            <div>
+                <div class="col-md-12 center-text">
+                    <h1 align="center"><b><i><span style="color:white">WEB <span style="color:rgb(98, 236, 86)"> DESIGN</span></i></b></h1>
+                    </h1>
+
+                    <div>
+                      <body>
+                      <div class="margin-right">
+                          <h1 align="right"><b><i><span style="color:rgb(98, 236, 86)">HTML CANVAS<span style="color:rgb(255, 255, 255)"> DRAWING</span></i></b></h1>
+                      
+                      </div>
+                      </body>
+                  </div>
+      
+                </div>
+            </div>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header bg-body-tertiary">
+                    <h3 id="lblName" class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">John Philip Francisco</h3>
+                </div>
+                <div class="offcanvas-body">
+
+
+
+                    <!-- navigation side bar buttons -->
+                    <ul class=" navbar-nav justify-content-end flex-grow-1 pe-3" role="tablist">
+
+
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" aria-current="page" href="index.html" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                <i class="fa-solid fa-house fa-lg"></i>
+                                <span style="margin-left:10px;">Kanserrou.Pelep</span>
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link active" aria-current="page" href="web_design.html" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                              <i class="fa-solid fa-house fa-lg"></i>
+                              <span style="margin-left:10px;">Web Design</span>
+                          </a>
+                      </li>
+
+                      <li class="nav-item" role="presentation">
+                          <a class="nav-link active" aria-current="page" href="the_initials.html" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                              <i class="fa-solid fa-house fa-lg"></i>
+                              <span style="margin-left:10px;">The Initials</span>
+                          </a>
+                      </li>
+
+                      <li class="nav-item" role="presentation">
+                          <a class="nav-link active" aria-current="page" href="html_canvas_drawing.html" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                              <i class="fa-solid fa-house fa-lg"></i>
+                              <span style="margin-left:10px;">HTML Canvas Drawing</span>
+                          </a>
+                      </li>
+
+                      <li class="nav-item" role="presentation">
+                          <a class="nav-link active" aria-current="page" href="interactive_circle.html" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                              <i class="fa-solid fa-house fa-lg"></i>
+                              <span style="margin-left:10px;">Interactive Circle</span>
+                          </a>
+                      </li>
+
+                      <li class="nav-item" role="presentation">
+                          <a class="nav-link active" aria-current="page" href="the_gradients.html" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                              <i class="fa-solid fa-house fa-lg"></i>
+                              <span style="margin-left:10px;">The Gradients</span>
+                          </a>
+                      </li>
+
+                      <li class="nav-item" role="presentation">
+                          <a class="nav-link active" aria-current="page" href="the_rotate_translate_and_scale.html" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                              <i class="fa-solid fa-house fa-lg"></i>
+                              <span style="margin-left:10px;">The Rotate Translate and Scale</span>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </nav>  
+    <center>
+      
+<style> 
+</style>
+
+</center>
+    <style>
+        canvas {
+            border: 1px solid greenyellow;
+            background-color: black;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgoldenrodyellow;
+        }
+ </style>
+ 
+</head>
+       <h1><b><i><span style="color:rgb(0, 0, 0)">KANSERROU.PELEP,</span>
+       <h1>Arts . Portfolio</h1>
+<body>
+    <div class="cartoon">
+        <div class="shoulders"></div>
+        <div class="hair-back"></div>
+        <div class="neck"></div>
+        <div class="ear ha hb"></div>
+        <div class="ear ha hb"></div>
+        <div class="face">
+            <div class="cheek"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+            <div class="eye">
+                <div class="pupil"></div>
+                <div class="eye-bright"></div>
+            </div>N
+            <div class="eye">
+                <div class="pupil"></div>
+                <div class="eye-bright"></div>
+            </div>
+            <div class="eyebrow"></div>
+            <div class="eyebrow"></div>  
+        </div>
+        <div class="forehead"></div>
+        <div class="hair-front-1"></div>
+        <div class="hair-front-1"></div>
+        <div class="hair-front-2"></div>
+        <div class="hair-front-2"></div>
+        <div class="hair-front-3"></div>
+        <div class="hair-front-3"></div>
+        <div class="hair-bangs"></div>
+        <div class="shirt-neck"></div>
+        <div class="shirt-neck"></div>
+        <div class="HAVE A NICE DAY"></div>
+        <bottom>
+    </bottom>
+    </div> 
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <style>
+   body 
+   .cartoon {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 1vmin solid black;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+/****/
+.cartoon {
+  --skin: #fca;
+  --iris: #963;
+  --hair: #321;
+  --shirt: rgb(134, 15, 15);
+}
+
+.face {
+  width: 36%;
+  height: 45%;
+  background: var(--skin);
+  border-radius: 100% 100% / 20% 20% 120% 120%;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.forehead {
+  width: 36%;
+  height: 8%;
+  border-radius: 50%;
+  background: var(--skin);
+  top: 12%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+}
+
+.neck {
+  width: 15%;
+  height: 25%;
+  background: var(--skin);
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 8vmin;
+  box-shadow: inset 0 25.5vmin 0 -15vmin rgba(80,0,0,0,0.1), inset 0 -3vmin 0 -1vmin rgba(0,0,0,0.2), inset 0 -3vmin 0 -1vmin var(--shirt);
+}
+
+.mouth {
+  width: 40%;
+  height: 3%;
+  border: 0.25vmin solid rgba(0,0,0,0.2);
+  border-top-color: transparent;
+  border-radius: 100% / 100% 100% 40% 50%;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, 0) rotate(2deg);
+}
+
+.nose {
+  width: 16%;
+  height: 30%;
+  background: rgba(80,0,0,0.2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  clip-path:polygon(50% 0%, 60% 88%, 0% 85%, 55% 100%, 100% 88%)
+}
+
+.ear {
+  width: 8%;
+  height: 18%;
+  border-radius: 90% 100% 70% 100% / 70% 100%;
+  background: var(--skin);
+  box-shadow: inset -9vmin 0 0 -7vmin rgba(80%,0,0,0.125);
+  transform: rotate(-10deg);
+  top: 28%;
+  left: 27%; 
+}
+
+.ear::before {
+  width: 60%;
+  height: 80%;
+  border-radius: 100% 50% 0 0;
+  border: 0.25vmin solid rgba(80%,0,0,0.2);
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  top: 15%;
+  left: 4%;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+}
+
+.ear::after {
+  width: 2vmin;
+  height: 2vmin;
+  border: 0.25vmin solid rgba(80%,0,0,0.2);
+  border-radius: 50%;
+  top: 50%;
+  right: 8%;
+}
+
+.ear + .ear {
+  transform: scaleX(-1) rotate(-10deg);
+  left: auto;
+  right: 27.125%;
+}
+
+.eye {
+  width: 35%;
+  height: 20%;
+  background: white;
+  border-radius: 80% 90% 30% 40% / 70% 100% 90% 100%;
+  top: 25%;
+  right: 7%;
+  box-shadow: 0 -0.5vmin rgba(80%,0,0,0.2);
+  overflow: hidden;
+}
+
+.eye + .eye {
+  transform: scaleX(-1);
+  right: auto;
+  left: 7%;
+}
+
+.pupil {
+  width: 25%;
+  height: 50%;
+  background: #222;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  box-shadow: 0 0 0 2vmin var(--iris);
+}
+
+.eye-bright {
+  width: 1vmin;
+  height: 1vmin;
+  background: white;
+  border-radius: 50%;
+  top: 25%;
+  left: 30%;
+  box-shadow: -0.5vmin 0.75vmin 0 -0.25vmin white;
+}
+
+.eye + .eye .eye-bright {
+  left: 50;
+  box-shadow: 0.5vmin 0.75vmin 0 -0.125vmin white;
+}
+
+.cheek {
+  width: 80%;
+  height: 10%;
+  background: #f002;
+  border-radius: 20% 20% 100% 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(1vmin)
+}
+
+.eyebrow {
+  width: 40%;
+  height: 20%;
+  top: 15%;
+  right: 4%;
+  border-radius: 100% 90% 100% 40% / 70% 100% 90% 100%;
+  box-shadow: -0.25vmin -1.5vmin 0 -0.25vmin rgba(0,0,0,0.2), -0.25vmin -1.5vmin 0 -0.25vmin var(--hair);
+  transform: rotate(8deg);
+}
+
+.eyebrow + .eyebrow {
+  
+  transform: scaleX(-1) rotate(12deg);
+  left: 4%;
+  right: auto;
+}
+
+.hair-back {
+  width: 45%;
+  height: 56%;
+  border-radius: 90% 90% 30% 30% / 100%;
+  background: var(--hair);
+  top: 0%;
+  left: 49.7%;
+  transform: translate(-50%, 0);
+  border-radius: 100% 100% / 80% 80% 120% 120%;
+}
+
+.hair-front-1 {
+  width: 28%;
+  height: 20%;
+  background:  var(--hair);
+  border-radius: 0 100% 0 100%;
+  left: 50%;
+  top: 0%;
+}
+
+.hair-front-1 + .hair-front-1 {
+  left: 20%;
+  top: -5%;
+  transform: rotate(-50deg);
+}
+
+.hair-front-2 {
+  width: 30%;
+  height: 24%;
+  background:  var(--hair);
+  border-radius: 100% 0 120% 0;
+  left: 20%;
+  top: 0.75%;
+  transform: rotate(-3deg);
+}
+
+.hair-front-2 + .hair-front-2 {
+  height: 14%;
+  transform: rotate(1deg);
+  border-radius: 100% 0 140% 0;
+  top: -7.5%;
+  left: 45%;
+}
+
+.hair-front-3 {
+  width: 33%;
+  height: 13%;
+  background: var(--hair);
+  border-radius: 0% 100% 0 100%;
+  left: 50%;
+  top: -3.5%;
+  transform: rotate(-25deg);
+}
+
+.hair-front-3 + .hair-front-3 {
+  transform: rotate(3deg);
+  top: 0;
+  left: 53%;
+  
+}
+
+.hair-bangs {
+  width: 30%;
+  height: 20%;
+  border-radius: 50%;
+  transform: rotate(-10deg);
+  left: 13.5%;
+  top: -5%;
+  box-shadow: 3vmin 0 var(--hair);
+  clip-path: polygon(0% 50%, 150% 50%, 150% 100%, 0% 100%);
+}
+
+.shirt-neck {
+  width: 15%;
+  height: 8%;
+  background: var(--shirt);
+  transform:skew(-10deg) rotate(15deg);
+  box-shadow: inset 0 0 0 5vmin rgba(0,0,0,0.1);
+  top: 63%;
+  left: 35%;
+}
+
+.shirt-neck + .shirt-neck {
+  transform:scaleX(-1) skew(-10deg) rotate(15deg);
+  left: auto;
+  right: 35%
+}
+
+.shoulders {
+  width: 70%;
+  height: 30%;
+  background: var(--shirt);
+  border-radius: 50%;
+  top: 64%;
+  left: 15%;
+  transform: translate(-50, 0);
+  clip-path: polygon(0% 40%, 40%  10%, 40% 0%, 60% 0%, 60% 10%, 100% 40%, 100% 100%, 0% 100%);
+} 
+
+    
+        
+  
+       
+
+
+
+   

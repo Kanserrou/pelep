@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transforming</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: lightgoldenrodyellow;
+    }
+    .canvas-container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+    canvas {
+        border: 1px solid #000;
+    }
+    #circleCanvas, #rectangleCanvas {
+        background-color: aliceblue;
+    }
+</style>
+</head>
+<body>
+<div class="canvas-container">
+    <div>
+        <canvas id="circleCanvas" width="500" height="500"></canvas>
+    </div>
+    <div>
+        <canvas id="rectangleCanvas" width="500" height="500"></canvas>
+    </div>
+</div>
+
+<script>
+    const circleCanvas = document.getElementById('circleCanvas');
+    const circleCtx = circleCanvas.getContext('2d');
+    const rectangleCanvas = document.getElementById('rectangleCanvas');
+    const rectangleCtx = rectangleCanvas.getContext('2d');
+
+    // Draw default objects
+    drawHeptagon(circleCtx, 'red', 150, 150, 50);
+    drawHeptagon(circleCtx, 'green', 350, 350, 50);
+    drawRectangle(rectangleCtx, 'blue', 100, 100, 100, 100);
+    drawRectangle(rectangleCtx, 'orange', 300, 300, 100, 100);
+
+    // Drawing functions
+    function drawHeptagon(ctx, color, x, y, sideLength) {
+        ctx.fillStyle = color;
+        ctx.beginPath();
+        ctx.moveTo(x + sideLength * Math.cos(0), y + sideLength * Math.sin(0));
+        for (let i = 1; i <= 7; i++) {
+            ctx.lineTo(x + sideLength * Math.cos(i * 2 * Math.PI / 7), y + sideLength * Math.sin(i * 2 * Math.PI / 7));
+        }
+        ctx.closePath();
+        ctx.fill();
+    }
+
+    function drawRectangle(ctx, color, x, y, width, height) {
+        ctx.fillStyle = color;
+        ctx.fillRect(x, y, width, height);
+    }
+</script>
+</body>
+</html>

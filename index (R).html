@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing shapes</title>
+
+
+    <style>
+        canvas {
+            border: 1px solid black;
+            margin: 200px;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <center>
+
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Draw flower petals
+        let gradient = ctx.createRadialGradient(250, 250, 0, 250, 250, 50);
+        gradient.addColorStop(0, 'red');
+        gradient.addColorStop(1, 'pink');
+        ctx.beginPath();
+        ctx.arc(250, 250, 50, 0, Math.PI * 2);
+        ctx.fillStyle = gradient;
+        ctx.fill();
+
+        gradient = ctx.createRadialGradient(250, 200, 0, 250, 200, 50);
+        gradient.addColorStop(0, 'red');
+        gradient.addColorStop(1, 'pink');
+        ctx.beginPath();
+        ctx.arc(250, 200, 50, 0, Math.PI * 2);
+        ctx.fillStyle = gradient;
+        ctx.fill();
+
+        gradient = ctx.createRadialGradient(200, 250, 0, 200, 250, 50);
+        gradient.addColorStop(0, 'red');
+        gradient.addColorStop(1, 'pink');
+        ctx.beginPath();
+        ctx.arc(200, 250, 50, 0, Math.PI * 2);
+        ctx.fillStyle = gradient;
+        ctx.fill();
+
+        gradient = ctx.createRadialGradient(300, 250, 0, 300, 250, 50);
+        gradient.addColorStop(0, 'red');
+        gradient.addColorStop(1, 'pink');
+        ctx.beginPath();
+        ctx.arc(300, 250, 50, 0, Math.PI * 2);
+        ctx.fillStyle = gradient;
+        ctx.fill();
+
+        gradient = ctx.createRadialGradient(250, 300, 0, 250, 300, 50);
+        gradient.addColorStop(0, 'red');
+        gradient.addColorStop(1, 'pink');
+        ctx.beginPath();
+        ctx.arc(250, 300, 50, 0, Math.PI * 2);
+        ctx.fillStyle = gradient;
+        ctx.fill();
+
+
+        // Draw flower center
+        gradient = ctx.createRadialGradient(250, 250, 0, 250, 250, 20);
+        gradient.addColorStop(0, 'yellow');
+        gradient.addColorStop(1, 'gold');
+        ctx.beginPath();
+        ctx.arc(250, 250, 20, 0, Math.PI * 2);
+        ctx.fillStyle = gradient;
+        ctx.fill();
+
+        // Draw stem
+        ctx.beginPath();
+        ctx.moveTo(250, 270);
+        ctx.lineTo(250, 400);
+        gradient = ctx.createLinearGradient(250, 270, 250, 400);
+        gradient.addColorStop(0, 'green');
+        gradient.addColorStop(1, 'limegreen');
+        ctx.strokeStyle = gradient;
+        ctx.lineWidth = 5;
+        ctx.stroke();
+
+
+        // Draw leaf
+        gradient = ctx.createRadialGradient(290, 360, 0, 290, 360, 50);
+        gradient.addColorStop(0, 'green');
+        gradient.addColorStop(1, 'limegreen');
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.arc(290, 360, 50, 10, Math.PI * 2);
+        ctx.fill();
+        ctx.closePath();
+
+        // Draw description
+        ctx.fillStyle = 'black';
+        ctx.textAlign = 'center';
+        ctx.fillText("This is a simple flower, Hope you'll like it sir!", 250, 450);
+        
+
+    </script>
+
+</center>
+</body>
+
+</html>

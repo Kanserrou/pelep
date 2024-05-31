@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontsawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/1.4css.css">
+    <script type="text/javascript" src="js/jquery-min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+</head>
+
+<body>
+
+
+    <style>
+        .navbar {
+            height: 140px;
+            background-color: rgb(0, 0, 0);
+        }
+        
+        #offcanvasNavbar {
+            width: 280px;
+        }
+        
+        .inline {
+            display: inline-block
+        }
+        
+        .center-text {
+            text-align: center;
+        }
+        
+        .margin-top-20 {
+            margin-top: 20px;
+        }
+
+        body {
+    margin-top: 5px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+canvas {
+    border: 8px solid black;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: invert;
+}
+
+select {
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+    </style>
+
+<div>
+    <body>
+    <div class="margin-left">
+        <h1 align="left"><b><i><span style="color:rgb(29, 119, 36)">THE INTERACTIVE<span style="color:rgb(0, 0, 0)"> CIRCLE</span></i></b></h1>
+    
+    </div>
+    </body>
+  </div>
+
+
+  <nav class="navbar sticky-top shadow">
+    <div class="container-fluid">
+        <button class="navbar-toggler ml-5 border-0 shadow bg-dark" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"
+            style="margin-left:15px;">
+            <div class=" text-light p-2 ">
+                <i class="fa-solid fa-bars fa-xl"></i>
+            </div>
+        </button>
+            <div>
+                <div class="col-md-12 center-text">
+                    <h1 align="center"><b><i><span style="color:white">WEB <span style="color:rgb(98, 236, 86)"> DESIGN</span></i></b></h1>
+                    </h1>
+
+                    <div>
+                        <body>
+                        <div class="margin-right">
+                            <h1 align="right"><b><i><span style="color:rgb(98, 236, 86)">THE INTERACTIVE <span style="color:rgb(255, 255, 255)"> CIRCLE</span></i></b></h1>
+                        
+                        </div>
+                        </body>
+                    </div>
+        
+                </div>
+            </div>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header bg-body-tertiary">
+                    <h3 id="lblName" class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">John Philip Francisco</h3>
+                </div>
+                <div class="offcanvas-body">
+
+
+
+                    <!-- navigation side bar buttons -->
+                    <ul class=" navbar-nav justify-content-end flex-grow-1 pe-3" role="tablist">
+
+
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" aria-current="page" href="index.html" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                <i class="fa-solid fa-house fa-lg"></i>
+                                <span style="margin-left:10px;">Kanserrou.Pelep</span>
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" aria-current="page" href="web_design.html" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                <i class="fa-solid fa-house fa-lg"></i>
+                                <span style="margin-left:10px;">Web Design</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" aria-current="page" href="the_initials.html" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                <i class="fa-solid fa-house fa-lg"></i>
+                                <span style="margin-left:10px;">The Initilas</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" aria-current="page" href="html_canvas_drawing.html" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                <i class="fa-solid fa-house fa-lg"></i>
+                                <span style="margin-left:10px;">HTML Canvas Drawing</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" aria-current="page" href="interactive_circle.html" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                <i class="fa-solid fa-house fa-lg"></i>
+                                <span style="margin-left:10px;">Interactive Circle</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" aria-current="page" href="the_gradients.html" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                <i class="fa-solid fa-house fa-lg"></i>
+                                <span style="margin-left:10px;">The Gradients</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" aria-current="page" href="the_rotate_translate_and_scale.html" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                <i class="fa-solid fa-house fa-lg"></i>
+                                <span style="margin-left:10px;">The Rotate Translate and Scale</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<head>
+<h1><b><i><span style="color:rgb(0, 0, 0)">KANSERROU.PELEP,</span>
+<h1>Arts . Portfolio</h1>
+</head>
+    
+    <center>
+        <canvas id="canvas" width="500" height="500"></canvas>
+        <br>
+        <br>
+        <input type="number" id="xpos" placeholder="X">
+        <br>
+        <br>
+        <input type="number" id="ypos" placeholder="Y">
+        <br>
+        <br>
+        <input type="number" id="width" placeholder="width">
+        <br>
+        <br>
+        <input type="number" id="height" placeholder="height">
+        <br>
+        <br>
+        <input type="color" id="color" onclick="Color()" value="">
+        <input type="button" onclick="ChangeBGColor()" value="Change Canvas Color">
+        <input type="button" onclick="StrokeRectangle()" value="Generate Stroke Rectangle">
+        <input type="button" onclick="FillRectangle()" value="Generate Fill Rectangle">
+        <input type="button" onclick="ClearRect()" value="Clear Rectangle">
+        <input type="button" onclick="ClearAll()" value="Clear All">
+    </center>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgoldenrodyellow;
+        }
+    </style>
+    
+
+    <script>
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+
+        var color;
+
+        function Color() {
+            color = $("#color").val();
+        }
+
+        function ChangeBGColor() {
+            Color();
+            $("#canvas").css("background-color", color);
+        }
+
+        function StrokeRectangle() {
+            Color();
+            var x = $("#xpos").val();
+            var y = $("#ypos").val();
+            var width = $("#width").val();
+            var height = $("#height").val();
+
+            ctx.beginPath();
+            ctx.strokeStyle = color;
+            ctx.strokeRect(x, y, width, height);
+
+            //ctx.stroke();
+        }
+
+        function FillRectangle() {
+            Color();
+            var x = $("#xpos").val();
+            var y = $("#ypos").val();
+            var width = $("#width").val();
+            var height = $("#height").val();
+
+            ctx.beginPath();
+            ctx.fillStyle = color;
+            ctx.fillRect(x, y, width, height);
+
+        }
+
+        function ClearRect() {
+            var x = $("#xpos").val();
+            var y = $("#ypos").val();
+            var width = $("#width").val();
+            var height = $("#height").val();
+
+
+            ctx.beginPath();
+            ctx.clearRect(x, y, width, height);
+
+        }
+
+        function ClearAll() {
+            ctx.beginPath();
+            ctx.clearRect(0, 0, 500, 500);
+        }
+    </script>
+</body>
+<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+
+</html>

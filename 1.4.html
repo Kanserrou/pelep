@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw Box</title>
+    <script src="jquery-min.js"></script>
+    <link rel="stylesheet" href="1.4.css">
+    <script src="1.4.js"></script>
+</head>
+<body>
+    <div id="controls">
+        <label for="Heigth">Height: <input type="number" id="height" placeholder="1-1000"></label>
+        <label for="width">Width: <input type="number" id="width" placeholder="1-500"></label>
+
+        <label for="X">X-Coordinate: <input type="number" id="xCor" placeholder="X Coordinate"></label>
+        <label for="Y">Y-Coordinate: <input type="number" id="yCor" placeholder="Y Coordinate"></label><br>
+        
+        <label for="color">Color: </label>
+        <select name="Color" id="color">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+        </select>
+
+        <button onclick="draw()">Draw Box</button>
+        <button onclick="clearAll()">Clear Box</button>
+
+        <label for="border">Border: </label>
+        <select name="Color2" id="color2">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+        </select>
+
+        <button onclick="borderColor()">Draw Border</button>
+        <button onclick="clearBorder()">Clear Border</button><br>
+
+        <canvas id="myCanvas" width="1000" height="500"></canvas>
+    </div>
+</body>
+</html>
